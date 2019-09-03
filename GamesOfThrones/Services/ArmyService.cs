@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using GamesOfThrones.Model;
 using GamesOfThrones.Interfaces;
+using NLog;
 
 namespace GamesOfThrones.Services
 {
@@ -13,6 +14,8 @@ namespace GamesOfThrones.Services
     {
         public static Random RND = new Random();
         public IPlatoonService _platoonService { get; set; }
+
+        private static Logger logger = LogManager.GetCurrentClassLogger();
 
         /// <summary>
         /// Инициализация структур.
@@ -32,7 +35,8 @@ namespace GamesOfThrones.Services
             Army result;
 
             if (armyName == GameService.ARMY_NAME_OPLOT)
-                return result = new Army
+            {
+                result = new Army
                 {
                     Name = armyName,
                     PlatoonList = new List<Platoon>{
@@ -41,8 +45,13 @@ namespace GamesOfThrones.Services
                         _platoonService.Create("Пегас", RND.Next(5, 11), 50, RND.Next(5, 51))
                     }
                 };
+
+                logger.Trace($"Армия {GameService.ARMY_NAME_OPLOT} создана.");
+                return result;
+            }
             else
-                return result = new Army
+            {
+                result = new Army
                 {
                     Name = armyName,
                     PlatoonList = new List<Platoon>{
@@ -51,6 +60,10 @@ namespace GamesOfThrones.Services
                         _platoonService.Create("Вампир", RND.Next(5, 11), 150, RND.Next(10, 61))
                     }
                 };
+
+                logger.Trace($"Армия {GameService.ARMY_NAME_NECROPOLIS} создана.");
+                return result;
+            }
         }
 
         /// <summary>
@@ -78,7 +91,9 @@ namespace GamesOfThrones.Services
 
                     Console.WriteLine();
                 }
-            });                    
+            });
+
+            logger.Trace($"Информация об армии {army.Name} выведена на консоль.");
         }
 
         /// <summary>
@@ -102,13 +117,18 @@ namespace GamesOfThrones.Services
         {
             string platoon_name = "";
 
+            // Ждем от пользователя корректное название отряда.
             while (!IsPlatoon(army, platoon_name))
             {
                 Console.WriteLine(text);
                 platoon_name = Convert.ToString(Console.ReadLine());
             }
 
-            return army.PlatoonList.FirstOrDefault(p => p.Name == platoon_name);
+            var result = army.PlatoonList.FirstOrDefault(p => p.Name == platoon_name);
+
+            logger.Trace($"Найденный отряд: {result.Name}.");
+
+            return result;
         }
 
         /// <summary>
@@ -127,7 +147,11 @@ namespace GamesOfThrones.Services
 
             int max = platoonList.Max(p => p.Force);
 
-            return platoonList.Where(p => p.Force == max);
+            var result = platoonList.Where(p => p.Force == max);
+
+            logger.Trace($"Выбран список самых сильных отрядов для компьютера, где сила удара = {max}. Их количество: {result.Count()}");
+
+            return result;
         }
 
         /// <summary>
@@ -136,7 +160,7 @@ namespace GamesOfThrones.Services
         /// Используется компьютером.
         /// </summary>
         /// <param name="platoonList">Список отрядов.</param>
-        /// <returns>Самый здоровый и сльный отряд.</returns>
+        /// <returns>Самый здоровый и сильный отряд.</returns>
         public Platoon GetHealthiestMilitaryUnit(List<Platoon> platoonList)
         {
             List<Platoon> lst = GetOffensiveMilitaryUnit(platoonList).ToList();
@@ -148,7 +172,11 @@ namespace GamesOfThrones.Services
 
             int max = platoonList.Max(p => p.Life);
 
-            return platoonList.Where(p => p.Life == max).First();
+            var result = platoonList.Where(p => p.Life == max).First();
+
+            logger.Trace($"Выбран самый сильный и здоровый отряд для компьютера, где здоровье = {max}.");
+
+            return result;
         }
     }
 }

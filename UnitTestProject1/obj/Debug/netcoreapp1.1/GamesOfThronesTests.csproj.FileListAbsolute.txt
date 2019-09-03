@@ -26,3 +26,4 @@ C:\Users\user\Documents\Visual Studio 2017\Repositories\GamesOfThrones\UnitTestP
 C:\Users\user\Documents\Visual Studio 2017\Repositories\GamesOfThrones\UnitTestProject1\obj\Debug\netcoreapp1.1\GamesOfThronesTests.AssemblyInfo.cs
 C:\Users\user\Documents\Visual Studio 2017\Repositories\GamesOfThrones\UnitTestProject1\obj\Debug\netcoreapp1.1\GamesOfThronesTests.dll
 C:\Users\user\Documents\Visual Studio 2017\Repositories\GamesOfThrones\UnitTestProject1\obj\Debug\netcoreapp1.1\GamesOfThronesTests.pdb
+C:\Users\user\Documents\Visual Studio 2017\Repositories\GamesOfThrones\UnitTestProject1\bin\Debug\netcoreapp1.1\NLog.config

@@ -1,6 +1,8 @@
 ﻿using GamesOfThrones.Services;
 using Autofac;
 using GamesOfThrones.Interfaces;
+using NLog;
+using System;
 
 namespace GamesOfThrones
 {

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using GamesOfThrones.Model;
 using GamesOfThrones.Interfaces;
+using NLog;
 
 namespace GamesOfThrones.Services
 {
@@ -48,6 +49,8 @@ namespace GamesOfThrones.Services
         /// </summary>
         public IPlatoonService _platoonService { get; set; }
 
+        private static Logger logger = LogManager.GetCurrentClassLogger();
+
         /// <summary>
         /// Инициализация структур.
         /// </summary>
@@ -73,6 +76,7 @@ namespace GamesOfThrones.Services
             {
                 FirstName = HUMAN_NAME;
                 Console.WriteLine("Первым ходит Человек.");
+                logger.Trace($"Первым ходит Человек.");
 
                 // 2) Выбрать замок.
                 string n = Console.ReadLine();
@@ -88,6 +92,7 @@ namespace GamesOfThrones.Services
                 if (number == 1)
                 {
                     Console.WriteLine($"Замок Компьютера: {ARMY_NAME_OPLOT}. Замок Человека: {ARMY_NAME_NECROPOLIS}.");
+                    logger.Trace($"Замок Компьютера: {ARMY_NAME_OPLOT}. Замок Человека: {ARMY_NAME_NECROPOLIS}.");
 
                     Nekropolis.Gamer = HUMAN_NAME;
                     Oplot.Gamer = COMPUTER_NAME;
@@ -95,6 +100,7 @@ namespace GamesOfThrones.Services
                 else
                 {
                     Console.WriteLine($"Замок Компьютера: {ARMY_NAME_NECROPOLIS}. Замок Человека: {ARMY_NAME_OPLOT}.");
+                    logger.Trace($"Замок Компьютера: {ARMY_NAME_NECROPOLIS}. Замок Человека: {ARMY_NAME_OPLOT}.");
 
                     Nekropolis.Gamer = COMPUTER_NAME;
                     Oplot.Gamer = HUMAN_NAME;
@@ -104,10 +110,12 @@ namespace GamesOfThrones.Services
             {
                 FirstName = COMPUTER_NAME;
                 Console.WriteLine("Первым ходит Компьютер.");
+                logger.Trace($"Первым ходит Компьютер.");
 
                 if (ArmyService.RND.Next(2) == 0)
                 {
                     Console.WriteLine($"Замок Компьютера: {ARMY_NAME_OPLOT}. Замок Человека: {ARMY_NAME_NECROPOLIS}.");
+                    logger.Trace($"Замок Компьютера: {ARMY_NAME_OPLOT}. Замок Человека: {ARMY_NAME_NECROPOLIS}.");
 
                     Nekropolis.Gamer = HUMAN_NAME;
                     Oplot.Gamer = COMPUTER_NAME;
@@ -115,6 +123,7 @@ namespace GamesOfThrones.Services
                 else
                 {
                     Console.WriteLine($"Замок Человека: {ARMY_NAME_OPLOT}. Замок Компьютера: {ARMY_NAME_NECROPOLIS}.");
+                    logger.Trace($"Замок Человека: {ARMY_NAME_OPLOT}. Замок Компьютера: {ARMY_NAME_NECROPOLIS}.");
 
                     Nekropolis.Gamer = COMPUTER_NAME;
                     Oplot.Gamer = HUMAN_NAME;
@@ -130,10 +139,15 @@ namespace GamesOfThrones.Services
         /// <returns>Обороняющийся отряд.</returns>
         public Platoon Offensive(Platoon pl_1, Platoon pl_2)
         {
+            Console.WriteLine($"Начало атаки {pl_1} на {pl_2}.");
+            logger.Trace($"Начало атаки {pl_1} на {pl_2}.");
+
             List<Unit> result = new List<Unit>();
 
             // Урон, который может нанести отряд.
             int сasualties = _platoonService.GetCasualties(pl_1);
+
+            Console.WriteLine($"Сила удара {сasualties}.");
 
             var lst = pl_2.UnitList;
 
@@ -166,6 +180,9 @@ namespace GamesOfThrones.Services
 
             pl_2.UnitList = result;
 
+            Console.WriteLine($"Конец атаки.");
+            logger.Trace($"Конец атаки {pl_1} на {pl_2}.");
+
             return pl_2;
         }
 
@@ -180,16 +197,24 @@ namespace GamesOfThrones.Services
             Console.WriteLine($"Отряд {platoon_2.Name} нападал на отряд {platoon_1.Name}.");
             Console.WriteLine();
 
+            logger.Trace($"Отряд {platoon_2.Name} нападал на отряд {platoon_1.Name}.");
+
             // Жертва после боя.
             Platoon pl = Offensive(platoon_2, platoon_1);
 
             if (!pl.UnitList.Any())
             {
+                logger.Trace($"Start.army.PlatoonList.Remove(pl): в отряде {pl.Name} не осталось юнитов.");
+
                 army.PlatoonList.Remove(pl);
+
+                logger.Trace($"End.army.PlatoonList.Remove(pl).");
             }
 
             FirstName = army.Gamer;
             Console.WriteLine($"Теперь играет {FirstName}.");
+
+            logger.Trace($"Переход хода, играет {FirstName}.");
         }
     }
 }

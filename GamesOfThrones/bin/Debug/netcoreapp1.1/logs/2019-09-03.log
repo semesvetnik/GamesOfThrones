@@ -1,0 +1,71 @@
+2019-09-03 16:37:46.0099 | TRACE | GamesOfThrones.Services.ArmyService | Армия Некрополис создана.
+2019-09-03 16:37:46.1729 | TRACE | GamesOfThrones.Services.ArmyService | Армия Оплот создана.
+2019-09-03 16:37:54.5404 | TRACE | GamesOfThrones.Services.ArmyService | Информация об армии Некрополис выведена на консоль.
+2019-09-03 16:37:54.5544 | TRACE | GamesOfThrones.Services.ArmyService | Информация об армии Оплот выведена на консоль.
+2019-09-03 16:38:04.3300 | TRACE | GamesOfThrones.Services.ArmyService | Найденный отряд: Пегас.
+2019-09-03 16:38:13.2595 | TRACE | GamesOfThrones.Services.ArmyService | Найденный отряд: Вампир.
+2019-09-03 16:38:13.2595 | TRACE | GamesOfThrones.Services.GameService | Отряд Вампир нападал на отряд Пегас.
+2019-09-03 16:38:13.2595 | TRACE | GamesOfThrones.Services.GameService | Переход хода, играет Компьютер.
+2019-09-03 16:38:13.2925 | TRACE | GamesOfThrones.Services.ArmyService | Информация об армии Некрополис выведена на консоль.
+2019-09-03 16:38:13.3065 | TRACE | GamesOfThrones.Services.ArmyService | Информация об армии Оплот выведена на консоль.
+2019-09-03 16:38:13.3065 | TRACE | GamesOfThrones.Services.ArmyService | Выбран список самых сильных отрядов для компьютера, где сила удара = 265. Их количество: 1
+2019-09-03 16:38:13.3065 | TRACE | GamesOfThrones.Services.ArmyService | Выбран самый сильный и здоровый отряд для компьютера, где здоровье = 750.
+2019-09-03 16:38:13.3065 | TRACE | GamesOfThrones.Services.ArmyService | Выбран список самых сильных отрядов для компьютера, где сила удара = 304. Их количество: 1
+2019-09-03 16:38:13.3065 | TRACE | GamesOfThrones.Services.GameService | Отряд Кентавр нападал на отряд Вампир.
+2019-09-03 16:38:13.3215 | TRACE | GamesOfThrones.Services.GameService | Переход хода, играет Человек.
+2019-09-03 16:38:13.3445 | TRACE | GamesOfThrones.Services.ArmyService | Информация об армии Некрополис выведена на консоль.
+2019-09-03 16:38:13.3585 | TRACE | GamesOfThrones.Services.ArmyService | Информация об армии Оплот выведена на консоль.
+2019-09-03 16:38:17.7097 | TRACE | GamesOfThrones.Services.ArmyService | Найденный отряд: Пегас.
+2019-09-03 16:38:22.6050 | TRACE | GamesOfThrones.Services.ArmyService | Найденный отряд: Вампир.
+2019-09-03 16:38:22.6050 | TRACE | GamesOfThrones.Services.GameService | Отряд Вампир нападал на отряд Пегас.
+2019-09-03 16:38:22.6050 | TRACE | GamesOfThrones.Services.GameService | Переход хода, играет Компьютер.
+2019-09-03 16:38:22.6260 | TRACE | GamesOfThrones.Services.ArmyService | Информация об армии Некрополис выведена на консоль.
+2019-09-03 16:38:22.6430 | TRACE | GamesOfThrones.Services.ArmyService | Информация об армии Оплот выведена на консоль.
+2019-09-03 16:38:22.6430 | TRACE | GamesOfThrones.Services.ArmyService | Выбран список самых сильных отрядов для компьютера, где сила удара = 265. Их количество: 1
+2019-09-03 16:38:22.6430 | TRACE | GamesOfThrones.Services.ArmyService | Выбран самый сильный и здоровый отряд для компьютера, где здоровье = 446.
+2019-09-03 16:38:22.6430 | TRACE | GamesOfThrones.Services.ArmyService | Выбран список самых сильных отрядов для компьютера, где сила удара = 304. Их количество: 1
+2019-09-03 16:38:22.6500 | TRACE | GamesOfThrones.Services.GameService | Отряд Кентавр нападал на отряд Вампир.
+2019-09-03 16:38:22.6500 | TRACE | GamesOfThrones.Services.GameService | Переход хода, играет Человек.
+2019-09-03 16:38:22.6710 | TRACE | GamesOfThrones.Services.ArmyService | Информация об армии Некрополис выведена на консоль.
+2019-09-03 16:38:22.6890 | TRACE | GamesOfThrones.Services.ArmyService | Информация об армии Оплот выведена на консоль.
+2019-09-03 16:38:27.2733 | TRACE | GamesOfThrones.Services.ArmyService | Найденный отряд: Пегас.
+2019-09-03 16:38:31.1995 | TRACE | GamesOfThrones.Services.ArmyService | Найденный отряд: Вампир.
+2019-09-03 16:38:31.1995 | TRACE | GamesOfThrones.Services.GameService | Отряд Вампир нападал на отряд Пегас.
+2019-09-03 16:38:31.1995 | TRACE | GamesOfThrones.Services.GameService | Переход хода, играет Компьютер.
+2019-09-03 16:38:31.1995 | TRACE | GamesOfThrones.Services.ArmyService | Информация об армии Некрополис выведена на консоль.
+2019-09-03 16:38:31.2225 | TRACE | GamesOfThrones.Services.ArmyService | Информация об армии Оплот выведена на консоль.
+2019-09-03 16:38:31.2225 | TRACE | GamesOfThrones.Services.ArmyService | Выбран список самых сильных отрядов для компьютера, где сила удара = 180. Их количество: 1
+2019-09-03 16:38:31.2225 | TRACE | GamesOfThrones.Services.ArmyService | Выбран самый сильный и здоровый отряд для компьютера, где здоровье = 1350.
+2019-09-03 16:38:31.2315 | TRACE | GamesOfThrones.Services.ArmyService | Выбран список самых сильных отрядов для компьютера, где сила удара = 304. Их количество: 1
+2019-09-03 16:38:31.2315 | TRACE | GamesOfThrones.Services.GameService | Отряд Кентавр нападал на отряд Скелет.
+2019-09-03 16:38:31.2315 | TRACE | GamesOfThrones.Services.GameService | Переход хода, играет Человек.
+2019-09-03 16:38:31.2505 | TRACE | GamesOfThrones.Services.ArmyService | Информация об армии Некрополис выведена на консоль.
+2019-09-03 16:38:31.2505 | TRACE | GamesOfThrones.Services.ArmyService | Информация об армии Оплот выведена на консоль.
+2019-09-03 16:38:34.4917 | TRACE | GamesOfThrones.Services.ArmyService | Найденный отряд: Пегас.
+2019-09-03 16:38:37.7809 | TRACE | GamesOfThrones.Services.ArmyService | Найденный отряд: Вампир.
+2019-09-03 16:38:37.7819 | TRACE | GamesOfThrones.Services.GameService | Отряд Вампир нападал на отряд Пегас.
+2019-09-03 16:38:37.7819 | TRACE | GamesOfThrones.Services.GameService | Start.army.PlatoonList.Remove(pl): отряде Пегас не осталось юнитов.
+2019-09-03 16:38:37.7819 | TRACE | GamesOfThrones.Services.GameService | End.army.PlatoonList.Remove(pl).
+2019-09-03 16:38:37.7819 | TRACE | GamesOfThrones.Services.GameService | Переход хода, играет Компьютер.
+2019-09-03 16:38:37.7819 | TRACE | GamesOfThrones.Services.ArmyService | Информация об армии Некрополис выведена на консоль.
+2019-09-03 16:38:37.7819 | TRACE | GamesOfThrones.Services.ArmyService | Информация об армии Оплот выведена на консоль.
+2019-09-03 16:38:37.7819 | TRACE | GamesOfThrones.Services.ArmyService | Выбран список самых сильных отрядов для компьютера, где сила удара = 180. Их количество: 1
+2019-09-03 16:38:37.7819 | TRACE | GamesOfThrones.Services.ArmyService | Выбран самый сильный и здоровый отряд для компьютера, где здоровье = 1046.
+2019-09-03 16:38:37.7819 | TRACE | GamesOfThrones.Services.ArmyService | Выбран список самых сильных отрядов для компьютера, где сила удара = 304. Их количество: 1
+2019-09-03 16:38:37.7969 | TRACE | GamesOfThrones.Services.GameService | Отряд Кентавр нападал на отряд Скелет.
+2019-09-03 16:38:37.7969 | TRACE | GamesOfThrones.Services.GameService | Переход хода, играет Человек.
+2019-09-03 16:38:37.7969 | TRACE | GamesOfThrones.Services.ArmyService | Информация об армии Некрополис выведена на консоль.
+2019-09-03 16:38:37.7969 | TRACE | GamesOfThrones.Services.ArmyService | Информация об армии Оплот выведена на консоль.
+2019-09-03 16:38:54.8949 | TRACE | GamesOfThrones.Services.ArmyService | Найденный отряд: Кентавр.
+2019-09-03 16:38:59.0101 | TRACE | GamesOfThrones.Services.ArmyService | Найденный отряд: Вампир.
+2019-09-03 16:38:59.0101 | TRACE | GamesOfThrones.Services.GameService | Отряд Вампир нападал на отряд Кентавр.
+2019-09-03 16:38:59.0131 | TRACE | GamesOfThrones.Services.GameService | Переход хода, играет Компьютер.
+2019-09-03 16:38:59.0131 | TRACE | GamesOfThrones.Services.ArmyService | Информация об армии Некрополис выведена на консоль.
+2019-09-03 16:38:59.0131 | TRACE | GamesOfThrones.Services.ArmyService | Информация об армии Оплот выведена на консоль.
+2019-09-03 16:38:59.0131 | TRACE | GamesOfThrones.Services.ArmyService | Выбран список самых сильных отрядов для компьютера, где сила удара = 160. Их количество: 1
+2019-09-03 16:38:59.0131 | TRACE | GamesOfThrones.Services.ArmyService | Выбран самый сильный и здоровый отряд для компьютера, где здоровье = 816.
+2019-09-03 16:38:59.0131 | TRACE | GamesOfThrones.Services.ArmyService | Выбран список самых сильных отрядов для компьютера, где сила удара = 304. Их количество: 1
+2019-09-03 16:38:59.0131 | TRACE | GamesOfThrones.Services.GameService | Отряд Кентавр нападал на отряд Скелет.
+2019-09-03 16:38:59.0301 | TRACE | GamesOfThrones.Services.GameService | Переход хода, играет Человек.
+2019-09-03 16:38:59.0301 | TRACE | GamesOfThrones.Services.ArmyService | Информация об армии Некрополис выведена на консоль.
+2019-09-03 16:38:59.0301 | TRACE | GamesOfThrones.Services.ArmyService | Информация об армии Оплот выведена на консоль.

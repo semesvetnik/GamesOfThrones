@@ -6,6 +6,9 @@ using System.Text;
 
 namespace GamesOfThrones.Services
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class ReadWriteService : IReadWriteService
     {
         #region Properties
@@ -23,6 +26,9 @@ namespace GamesOfThrones.Services
             _gameService = game_service;
         }
         
+        /// <summary>
+        /// Визуализация игры.
+        /// </summary>
         public void Game()
         {
             Console.OutputEncoding = Encoding.Unicode;
